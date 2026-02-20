@@ -50,7 +50,6 @@ function pocExecute() {
         h += '<div style="max-width:900px;margin:0 auto;">';
         h += '<h1 style="color:#f00;font-size:28px;margin:0;">&#9888; XSS CONFIRMED &#9888;</h1>';
         h += '<h2 style="color:#ff0;margin:5px 0;">import-map-overrides + CSP bypass via cdn.jsdelivr.net</h2>';
-        h += '<p style="color:#888;">Security Research - ecosystem.dev.gfknewron.com</p>';
         h += '<hr style="border-color:#333">';
 
         h += '<h3 style="color:#0ff;">Execution context:</h3>';
